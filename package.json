@@ -1,12 +1,11 @@
 {
-  "name": "pdf-generator",
-  "version": "1.0.0",
+  "name": "foodstack-pdf-generator",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "template": "node create.js",
-    "pdf": "node index.js",
-    "test": "echo $0"
+    "create:template": "node createTemplate.js",
+    "create:pdf": "node createPdf.js"
   },
   "keywords": [],
   "author": "",
