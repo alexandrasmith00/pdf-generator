@@ -7,10 +7,15 @@ const createOptions = (name, data = null, pdfOptions) => ({
   pdfOptions: { format: 'A4', ...pdfOptions },
 })
 
+const generatePdf = async (name, data, pdfOptions = {}) => {
+  const options = createOptions(name, data, pdfOptions);
+  const result = await generatePdf(options);
+  return pdfOptions.path || Buffer.from(result).toString('base64');
+};
+
 module.exports = {
-  generatePdf: async (name, data, pdfOptions = {}) => {
-    const options = createOptions(name, data, pdfOptions);
-    const result = await generatePdf(options);
-    return pdfOptions.path || Buffer.from(result).toString('base64');
+  generatePdf,
+  generateAvailabilityListPdf: data => {
+    return generatePdf('availability-list', data);
   },
 };
