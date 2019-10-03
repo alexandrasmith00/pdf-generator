@@ -6,28 +6,34 @@
 - [Introduction - Please Read First](#introduction)
 - [Creating New Templates](#creating-templates)
 - [Generating PDFs](#generating-pdfs)
+- [Contributing](#contributing)
 
 <a name="introduction"></a>
 # Introduction - Please Read First
 
-This library is broken into two main components: building templates and generating PDFs for use.  
+This library is broken into two main components: building templates and generating PDFs for use.
+
+- Building templates: This library provides a way to easily generate new templates, easily edit and style them, and generate test PDFs.
+
+- Generating PDFs: This library is available as an npm module itself, where you can easily generate actual PDFs from the templates.
 
 <a name="creating-templates"></a>
-# Building New Templates
+# Creating New Templates
 
 This library provides command line tools for the following:
-* easily generate scaffolding for new templates
-* template development using Pug + scss, with hot reloading
-* generate and preview actual PDF output
+* [easily generate scaffolding for new templates](#creating-template-scaffolding)
+* [template development using Pug + scss, with hot reloading](#running-dev-environment)
+* [generate and preview actual PDF output](#build-test-pdf)
 
 ## Requirements
 
-First, you must have parcel bundler globally installed.
+You must have parcel bundler globally installed to run the development environment.
 ```bash
 > npm install -g parcel-bundler
 ```
 
-## Creating Template Scaffoldings
+<a name="creating-template-scaffolding"></a>
+## Creating Template Scaffolding
 This command creates scaffolding for a new template, with a command line argument for the template name.
 
 ```bash
@@ -46,29 +52,28 @@ When the scaffolding is finished being created, you will see a parcel command to
 > parcel templates/example/build/index.pug
 ```
 
-## Template Scaffolding Components
+### Template Scaffolding Components
 
 The scaffolding provides a basic hello world message to introduce you to the three main files to customize your template.
 
-* template.pug: The pug template for the pdf, similar to html.
+* __template.pug__: The pug template for the pdf, similar to html.
 
-* styles.scss: Styling to apply to the template in scss
+* __styles.scss__: Styling to apply to the template in scss
 
-* data.js: The example data object, using when rendering the template.  You can add to this file as additional data is required and use it to document what data is required to use the template.
+* __data.js__: The example data object, using when rendering the template.  You can add to this file as additional data is required and use it to document what data is required to use the template.
 
 The following files in the `build` folder are required as is. In order to keep development environment working, we recommend that you do not edit these files:
-* index.pug
-* pug.config.js
-* script.js
+* __index.pug__
+* __pug.config.js__
+* __script.js__
 
-## Running development environment
+<a name="running-dev-environment"></a>
+## Running the Dev Environment
 To run the development environment, you can run the parcel command:
 ```bash
 > parcel templates/example/build/index.pug
 ```
-where example is the `name` of the template (including the folder inside templates).
-
-Alternatively, we provide an `npm` script to run this same command.  You must specify the template at the beginning of the command:
+where example is the `name` of the template. Alternatively, we provide an `npm` script to run this same command.  You must specify the template at the beginning of the command:
 
 ```bash
 > template=example npm run dev
@@ -80,7 +85,8 @@ A server is created at `http://localhost:1234` which will automatically show the
 
 > The data object is set when compiled and therefore, changes will not reflect in hot reload.  Instead, you must restart the command to see any changes reflected.  Additionally, parcel caches this data object on occasion.  If you are not seeing changes to the data object, run the parcel command with the `--no-cache` option.
 
-### Build test PDF
+<a name="build-test-pdf"></a>
+## Build a Test PDF
 Lastly, we provide a command line script to generate a test pdf.  You can generate a test pdf for any template by Running
 
 ```bash
@@ -146,7 +152,8 @@ We've detailed the extra function names and their corresponding template names b
 | availability-list | generateAvailabilityList |
 
 
-### Contributing
+<a name="contributing"></a>
+# Contributing
 The most common way to contribute to this library is by adding additional templates.  After following the instructions above, please make sure to:
 
 1. Add your template to the list of available templates above.  Please include description of the expected data.
