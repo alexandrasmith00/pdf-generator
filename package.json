@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "create:template": "node createTemplate.js",
-    "create:pdf": "node createPdf.js"
+    "create:template": "node createScaffolding.js",
+    "create:pdf": "node createPdf.js",
+    "dev": "parcel templates/$template/build/index.pug --no-cache"
   },
   "keywords": [],
   "author": "",
