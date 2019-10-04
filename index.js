@@ -1,10 +1,12 @@
 const { generatePdf } = require('tea-school');
+const path = require('path');
 
 const createOptions = (name, data = null, pdfOptions) => ({
-  htmlTemplatePath: `./templates/${name}/build/index.pug`,
-  styleOptions: { file: `./templates/${name}/styles.scss` },
-  htmlTemplateOptions: data || require(`./templates/${name}/data.js`),
-  pdfOptions: { format: 'A4', ...pdfOptions },
+   // path.resolve(__dirname, 'pdf-template.pug'),
+  htmlTemplatePath: path.resolve(__dirname, `templates/${name}/build/index.pug`),
+  styleOptions: { file: path.resolve(__dirname, `templates/${name}/styles.scss`) },
+  htmlTemplateOptions: data || require(path.resolve(__dirname, `templates/${name}/data.js`)),
+  pdfOptions,
 })
 
 const PDF = async (name, data, pdfOptions = {}) => {

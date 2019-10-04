@@ -9,7 +9,7 @@ if (template) {
     console.log('Building the PDF...');
 
     // generates a pdf and stores in the templates directory
-    const options = { path: `./templates/${template}/_output.pdf`, format: 'A4' };
+    const options = { path: `./templates/${template}/_output.pdf` };
     const path = await generatePdf(template, null, options);
 
     // on success, let user know where to find output
