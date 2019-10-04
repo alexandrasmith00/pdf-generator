@@ -26,11 +26,11 @@ This library provides command line tools for the following:
 * [generate and preview actual PDF output](#build-test-pdf)
 
 ## Requirements
-
-You must have parcel bundler globally installed to run the development environment.
+After cloning the repository, make sure you have the parcel bundler globally installed by running
 ```bash
 > npm install -g parcel-bundler
 ```
+and installing any other dependencies with `npm install`
 
 <a name="creating-template-scaffolding"></a>
 ## Creating Template Scaffolding
