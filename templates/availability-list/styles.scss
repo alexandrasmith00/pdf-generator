@@ -1,3 +1,29 @@
-th.header {
-  color: blue
+.table {
+  width: 80%;
+  border-spacing: 0;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+table, th, tr, td {
+  border: 1px solid #000;
+  border-collapse: collapse;
+}
+
+th {
+  height: 25px;
+  font-size: 16px;
+  font-weight: 700;
+  background-color: #f2f2f2;
+}
+
+tr {
+  text-align: center;
+}
+
+td {
+  color: black;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
 }

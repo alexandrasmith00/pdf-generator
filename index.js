@@ -1,7 +1,7 @@
 const { generatePdf } = require('tea-school');
 
 const createOptions = (name, data = null, pdfOptions) => ({
-  htmlTemplatePath: `./templates/${name}/template.pug`,
+  htmlTemplatePath: `./templates/${name}/build/index.pug`,
   styleOptions: { file: `./templates/${name}/styles.scss` },
   htmlTemplateOptions: data || require(`./templates/${name}/data.js`),
   pdfOptions: { format: 'A4', ...pdfOptions },

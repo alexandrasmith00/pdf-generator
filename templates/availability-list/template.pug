@@ -1,15 +1,14 @@
-//- Keep this line for correctly building PDFs
-style(type="text/css") !{compiledStyle}
-
-table.red
+table.table
   thead
     tr
-      th.header Code
+      th Item Code
       th Name
       th Price
+      th Notes
   tbody
     each item in items
       tr
         td #{item.code}
         td #{item.name}
         td #{item.price}
+        td #{item.notes}

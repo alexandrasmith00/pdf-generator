@@ -1,6 +1,34 @@
 module.exports = {
   items: [
-    { name: 'Baby Back Ribs', price: '$7.50/lb' },
-    { name: 'Super Chops', price: '$9.50/lb' },
+    {
+      name: "Sausage",
+      price: "7.50",
+      code: "SAU",
+      notes: "3 per pack",
+    },
+    {
+      name: "Sausage",
+      price: "7.50",
+      code: "SAU",
+      notes: "3 per pack",
+    },
+    {
+      name: "Sausage",
+      price: "7.50",
+      code: "SAU",
+      notes: "3 per pack",
+    },
+    {
+      name: "Sausage",
+      price: "7.50",
+      code: "SAU",
+      notes: "3 per pack",
+    },
+    {
+      name: "Sausage",
+      price: "7.50",
+      code: "SAU",
+      notes: "3 per pack",
+    },
   ],
 };
