@@ -1,4 +1,7 @@
 module.exports = {
+  producer: {
+    name:"Short Creek Farm"
+  },
   items: [
     {
       name: "Sausage",
