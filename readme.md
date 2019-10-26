@@ -124,14 +124,24 @@ const result = await generatePdf('availability-list', data, {});
 The following is a comprehensive list of templates currently available for use, along with the expected data.
 
 #### availability-list
-Creates a basic table format of upcoming availability.  Given data object with array of items, where each item includes product name and price.
+Creates a basic table format of upcoming availability.  Given a producr with name and period, as well as an array of items, where each item includes product name and price, and optionally, notes and code.
 
 ```javascript
 const data = {
+  producer: {
+    name:"Short Creek Farm",
+    period:"10/24/19 - 10/31/19",
+  },
   items: [
     {
       name: 'Product Name',
       price: '$8.00/lb',
+    },
+    {
+      name: 'Product Name',
+      price: '$8.00/lb',
+      code: 'ABC123', // optional
+      notes: 'additional product notes' // optional
     },
   ]
 }

@@ -4,14 +4,16 @@ div.info
 table.table
   thead
     tr
-      th Item Code
+      if items[0].code
+        th Item Code
       th Item Name
       th Price
       th Notes
   tbody
     each item in items
       tr
-        td #{item.code}
+        if items[0].code
+          td #{item.code}
         td #{item.name}
         td #{item.price}
         td #{item.notes}
