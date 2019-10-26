@@ -1,6 +1,7 @@
 module.exports = {
   producer: {
-    name:"Short Creek Farm"
+    name:"Short Creek Farm",
+    period:"10/24/19 - 10/31/19",
   },
   items: [
     {
