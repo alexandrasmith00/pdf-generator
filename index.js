@@ -6,7 +6,7 @@ const createOptions = (name, data = null, pdfOptions) => ({
   htmlTemplatePath: path.resolve(__dirname, `templates/${name}/build/index.pug`),
   styleOptions: { file: path.resolve(__dirname, `templates/${name}/styles.scss`) },
   htmlTemplateOptions: data || require(path.resolve(__dirname, `templates/${name}/data.js`)),
-  pdfOptions,
+  pdfOptions: { { args: ['--no-sandbox'] }, ...pdfOptions },
 })
 
 const PDF = async (name, data, pdfOptions = {}) => {
